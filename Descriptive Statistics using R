@@ -1,0 +1,35 @@
+There are few steps which needs to be followed while creating ML algorithms:
+1.	Understand Data- It involves following steps:
+i)	Data Cleaning. Finding missing or corrupt data and think of various cleaning operations to perform such as marking or removing bad data.
+ii)	Data Transforms. Noticing some attributes have familiar distributions such as Gaussian/exponential which give some ideas of scaling/log/other transformations.
+iii)	Data Modelling. Noticing some properties of the data such as distributions that suggest the use or not use specific ML algorithms.
+
+There are 2 methods of looking into data:
+1.	Descriptive statistics
+2.	Data visualization
+
+Using above techniques, following steps can be followed:
+•	Peek data: The very first thing to do is to just look at some raw data from your dataset. If your dataset is small you might be able to display it all on the screen. Often it is not, so you can take a small sample and review that.
+Example: head(datasetname, n=20)
+•	Dimensions of data: If you have a lot of instances, you may need to work with a smaller sample of the data so that model training and evaluation is computationally tractable. If you have a vast number of attributes, you may need to select those that are most relevant. If you have more attributes than instances you may need to select specific modelling techniques.
+Example: dim(datasetname)
+•	Data types of data: This is invaluable. The types will indicate the types of further analysis, types of visualization and even the types of machine learning algorithms that you can use.
+Example: sapply(datasetname, class)
+•	Class distribution of data: This is important because it may highlight an imbalance in the data, that if severe may need to be addressed with rebalancing techniques. In the case of a multi-class classification problem, it may expose class with a small or zero instances that may be candidates for removing from the dataset.
+Example: 
+y <- datasetname$columnname
+cbind(freq=table(y), percentage=prop.table(table(y))*100)
+•	Data summary of data: There is a most valuable function called summary that summarizes each attribute in your dataset in turn. The function creates a table for each attribute and lists a breakdown of values. Factors are described as counts next to each class label. Numerical attributes are described as:
+a)	Min
+b)	25th percentile
+c)	Median
+d)	Mean
+e)	75th percentile
+f)	Max
+Example: summary(datasetname)
+•	Standard deviations in data: The standard deviation along with the mean are useful to know if the data has a Gaussian (or nearly Gaussian) distribution.
+Example: sapply(datasetname[,1:8], sd)
+•	Skewness in data: If distribution looks like Gaussian but is pushed far left or right it is useful to know the skew. Getting a feeling for the skew is much easier with plots of the data, such as a histogram or density plot. It is difficult to tell from looking at means, standard deviations and quartiles.
+Example: skew <- apply(datasetname[,1:8], 2, skewness)
+•	Correlations within data: It is important to think about how attributes relate to each other. For numeric attributes, an excellent way to think about attribute-to-attribute interactions is to calculate correlations for each pair of attributes.
+Example: correlations <- cor(datasetname[,1:8])
