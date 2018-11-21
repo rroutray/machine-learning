@@ -1,0 +1,36 @@
+Data and Distributions
+
+The concept of data distribution provides the basis for analytics and inferential statistics. There are 2 types of data:
+1.	Discrete Data, as the name suggests, can take only specified values and no fractions. For example, 1, 2, 3, 4, 5 or 6 and not 1.1, 2.6 etc.
+
+2.	Continuous Data can take any value within a range. The range may be finite or infinite. For example, weight or height of a person, the length of the road. 
+
+Distributions:
+Bernoulli Distribution
+It is a distribution which has only two possible outcomes success or failure with single trial. 
+A variable x which has a Bernoulli distribution can take value 1 with the probability of success, say p, 
+and the value 0 with the probability of failure, say q or 1-p.
+Bernoulli Distribution is a special case of Binomial Distribution with a single trial.
+
+Uniform Distribution
+The probabilities of getting outcomes are equally likely and that is the basis of a uniform distribution.
+
+Binomial Distribution
+A distribution where only two outcomes are possible, success or failure, gain or loss, win or lose and 
+where the probability of success and failure is same for all the trials is called a Binomial Distribution.
+
+Normal Distribution
+Normal distribution represents the behaviour of most of the situations in the universe. 
+The sum of random variables turns out to be normally distributed, contributing to its widespread application. Any distribution is known as Normal distribution if it has the following characteristics:
+1.	The mean, median and mode of the distribution coincide.
+2.	The curve of the distribution is bell-shaped and symmetrical.
+3.	Total area under the curve is 1.
+4.	Exactly half of the values are to the left of the centre and the other half to the right.
+Poisson Distribution
+A distribution is called Poisson distribution when the following assumptions are valid:
+1. Any successful event should not influence the outcome of another successful event.
+2. The probability of success over a short interval must equal the probability of success over a longer interval.
+3. The probability of success in an interval approaches zero as the interval becomes smaller.
+
+Exponential Distribution
+It is primarily used for survival kind of analysis. From the expected life of a machine to the expected life of a human, exponential distribution successfully delivers the resul
